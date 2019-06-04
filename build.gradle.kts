@@ -12,10 +12,11 @@ group = "community.isomorphic"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
+val developmentOnly = configurations.create("developmentOnly")
 configurations {
 	developmentOnly
 	runtimeClasspath {
-		extendsFrom(configurations.developmentOnly.get())
+		extendsFrom(developmentOnly)
 	}
 }
 
