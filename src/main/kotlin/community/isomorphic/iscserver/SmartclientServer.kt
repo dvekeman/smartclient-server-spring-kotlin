@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class SmartclientServerSpringKotlinApplication
+class SmartclientServer
 
 fun main(args: Array<String>) {
-	runApplication<SmartclientServerSpringKotlinApplication>(*args)
+	runApplication<SmartclientServer>(*args)
 }
