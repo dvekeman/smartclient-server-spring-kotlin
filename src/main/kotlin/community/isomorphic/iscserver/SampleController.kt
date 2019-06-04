@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping
 @Controller
 class SampleController {
 
-    @GetMapping("/")
+    @GetMapping("/user")
     fun user(model: Model): String {
         model["firstname"] = "K"
         return "user"

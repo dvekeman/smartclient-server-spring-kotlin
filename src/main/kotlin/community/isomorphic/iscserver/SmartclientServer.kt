@@ -7,5 +7,6 @@ import org.springframework.boot.runApplication
 class SmartclientServer
 
 fun main(args: Array<String>) {
-	runApplication<SmartclientServer>(*args)
+	runApplication<SmartclientServer>(*args, init = {
+    })
 }
