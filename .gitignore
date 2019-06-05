@@ -30,5 +30,5 @@ HELP.md
 .vscode/
 
 ### ISOMORPHIC SMARTCLIENT ###
-src/main/resources/static/isomorphic/**
+src/main/webapp/isomorphic/**
 src/main/webapp/WEB-INF/lib/**

@@ -1,0 +1,13 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+
+    <!-- Minimal web.xml for custom tweaking. See SmartclientServer -->
+    <!-- listeners: community.isomorphic.iscserver.listener -->
+    <!-- servlets : community.isomorphic.iscserver.servlet -->
+    <display-name>SmartClient Server</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+
+</web-app>

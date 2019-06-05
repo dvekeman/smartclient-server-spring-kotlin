@@ -9,10 +9,50 @@
     <SCRIPT SRC="./isomorphic/system/modules/ISC_Grids.js"></SCRIPT>
     <SCRIPT SRC="./isomorphic/system/modules/ISC_Forms.js"></SCRIPT>
     <SCRIPT SRC="./isomorphic/system/modules/ISC_DataBinding.js"></SCRIPT>
-    <SCRIPT SRC="./isomorphic/skins/BlackOps/load_skin.js"></SCRIPT>
+    <SCRIPT SRC="./isomorphic/skins/Enterprise/load_skin.js"></SCRIPT>
 
 </head>
 <body>
+
 <h1>Hello</h1>
+<script type="text/javascript" src="sc/DataSourceLoader?dataSource=persons"></script>
+<script>
+var personsList = isc.ListGrid.create({
+    ID: "personsList",
+    dataSource: "persons",
+    width:500, height:224,
+    alternateRecordStyles:true,
+    showAllRecords:true,
+    recordClick: "editPerson.editRecord(record)",
+    autoFetchData: true
+})
+
+var editPersonForm = isc.DynamicForm.create({
+    ID: "editPerson",
+    dataSource: "persons",
+    left: 50, top: 250,
+    width: 300
+})
+
+var newBtn = isc.IButton.create({
+    title: "New",
+    click: "editPerson.editNewRecord()"
+})
+
+var saveBtn = isc.IButton.create({
+    title: "Save",
+    click: "editPerson.saveData()"
+})
+
+var btnLayout = isc.HLayout.create({
+    width: 500,
+    members: [ newBtn, saveBtn ]
+})
+
+isc.VLayout.create({
+    members: [ personsList, editPersonForm, btnLayout ]
+})
+</script>
+
 </body>
 </html>

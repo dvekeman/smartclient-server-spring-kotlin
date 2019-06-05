@@ -4,7 +4,7 @@ databaseChangeLog:
       author: dvekeman
       changes:
         - createTable:
-            tableName: person
+            tableName: persons
             columns:
               - column:
                   name: id

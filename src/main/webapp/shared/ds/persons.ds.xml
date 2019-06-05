@@ -1,0 +1,5 @@
+<DataSource
+        ID="persons"
+        serverType="sql"
+        tableName="persons"
+        autoDeriveSchema="true"/>
